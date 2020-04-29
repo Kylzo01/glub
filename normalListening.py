@@ -1,9 +1,5 @@
-#!/usr/bin/python
-
 import paho.mqtt.client as mqtt
-import time
 import ssl
-import listening
 
 host          = "node02.myqtthub.com"
 port          = 1883
@@ -23,10 +19,7 @@ def on_connect (client, userdata, flags, rc):
 
     if rc == 0:
         client.connected_flag = True
-        print ("connected OK") pull
-        Kylzo01
-        Wankshaft19
-
+        print ("connected OK")
         return
     
     print ("Failed to connect to %s, error was, rc=%s" % rc)
@@ -36,13 +29,26 @@ def on_connect (client, userdata, flags, rc):
 
 def on_message(client, userdata, msg):
     """ Callback called for every PUBLISH received """
-    print ("%s => %s" % (msg.topi, str(msg.payload)))
+    print("got a message")
+
+    message = msg.payload.decode("UTF-8")
+
+    #VOLTAR
+    if message == "Play":
+
+        #START PLAYING MUSIC
+
+    #BACKSTABBER
+    if message == "Fly"
+
+        #START MOVING
+
+    print ("%s => %s" % (msg.topic, message))
 
 # Define clientId, host, user and password
 client = mqtt.Client (client_id = client_id, clean_session = clean_session)
 
-sendMessage("UwU")
-def sendMessage(message):
+def connectUp():
 
     client.username_pw_set (user_name, password)
 
@@ -56,23 +62,31 @@ def sendMessage(message):
 
     # connect using standard unsecure MQTT with keepalive to 60
     client.connect (host, port, keepalive = 60)
+    client.loop_start()
+
     client.connected_flag = False
-
-
     while not client.connected_flag:           #wait in loop
         client.loop()
         time.sleep (1)
 
-    # publish message (optionally configuring qos=1, qos=2 and retain=True/False)
-    ret = client.publish ("Glub", message)
-    print ("Publish operation finished with ret=%s" % ret)
+    client.subscribe("Glub")
 
-    disconnect()
+    timer = 0
 
-    # Starts listening script which listens for a responce for 60 seconds
-    listening.connectUp()
+    try:
+        while True:
+            time.sleep(1)
 
-# close connection
+    except KeyboardInterrupt:
+        print("disconnecting")
+        client.disconnect()
+        client.loop_stop()
 
-def disconnect():
-    client.disconnect ()
+# publish message (optionally configuring qos=1, qos=2 and retain=True/False)
+#ret = client.publish ("some/message/to/publish", "{'status' : 'on'}")
+#client.loop ()
+
+#print ("Publish operation finished with ret=%s" % ret)
+
+
+connectUp()
