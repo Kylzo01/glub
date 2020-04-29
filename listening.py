@@ -59,7 +59,7 @@ def connectUp():
         client.loop()
         time.sleep (1)
 
-    client.subscribe("temperatureSensor")
+    client.subscribe("Glub")
 
     timer = 0
 
