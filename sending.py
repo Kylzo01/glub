@@ -23,9 +23,7 @@ def on_connect (client, userdata, flags, rc):
 
     if rc == 0:
         client.connected_flag = True
-        print ("connected OK") pull
-        Kylzo01
-        Wankshaft19
+        print ("connected OK")
 
         return
     
