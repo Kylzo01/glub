@@ -1,0 +1,9 @@
+This folder contains the path file, with instructions for Kheraass to follow
+The instructions are in lines of instruction, value pairs
+
+The four current instructions are fore, back, cw(clockwise), ccw(counterclockwise)
+
+the value correspond to either the length of time to move(fore, back)
+or the angle to turn(cw,ccw)
+
+the path file can be edited to enable changing of the path followed by the drone

@@ -1,0 +1,10 @@
+The current code working for the project is the one stored in KheraassCurrent
+It is a version that uses print statements to simulate motor output
+The code used in this project is intended for use with an Adafruit motor board, with all libraries and modules included
+However the boards module, checks whether the board is installed, as it is not, this throws errors
+
+The code for the motor kit, is commented out and a clean version with the code included is in
+KheraassWithHardware
+
+
+

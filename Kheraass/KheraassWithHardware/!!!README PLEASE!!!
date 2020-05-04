@@ -1,0 +1,5 @@
+At the moment these files are inoperable.
+they are intended for use with an adafruit motor board
+I do not possess one of these due to the current circumstances
+The code for using the board checks whether the board is attached
+to the pi.

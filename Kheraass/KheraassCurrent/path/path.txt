@@ -1,0 +1,4 @@
+fore~2
+back~1
+cw~10
+ccw~10
