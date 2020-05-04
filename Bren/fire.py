@@ -98,6 +98,6 @@ def shootWithSenseHat():
     sense.show_message("Pew Pew")
 
 
-shootWithSenseHat()
+#shootWithSenseHat()
 
 
