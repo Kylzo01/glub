@@ -1,0 +1,8 @@
+Client ID
+amzn1.application-oa2-client.6f1b2bd22ec64e9488ed8f834d2ef5d2
+Client secret
+651c67ffaf5be36e58a6ea293b713835ec771e62d15e17dcb6aa11d48623dfe9
+Security Profile ID
+amzn1.application.e63b4e899a48419eb43aaf223ff02ecf
+Security Profile Description
+AlexaPi
