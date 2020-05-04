@@ -1,8 +1,6 @@
 from sending import sendMessage as send
 import RPi.GPIO as GPIO
 from gpiozero import MotionSensor
-import vlc
-
 
 
 try:
@@ -27,14 +25,8 @@ try:
             
         elif who == "S":
             
-            irSense = MotionSensor(5)
-    
-            irSense.wait_for_motion()
-            
-            p = vlc.MediaPlayer("/home/pi/Documents/Glubwork/Glub.mp3")
-            
-            p.play()
-            
+            print("glub")
+
         
         elif who == "Break":
             
